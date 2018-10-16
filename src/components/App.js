@@ -34,6 +34,8 @@ class App extends Component {
     ]
   };
 
+
+
   // player id counter
   prevPlayerId = 5;
 
