@@ -9,20 +9,9 @@ class Stopwatch extends Component {
     }
 
     componentDidMount() {
-        fetch('https://www.hackthebox.eu/api/invite/generate', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'text/plain',
-              'Access-Control-Allow-Origin': '*'
-            },
-            body: JSON.stringify({
-              firstParam: 'yourValue'
-            })
-          }).then((response) => {
-              console.log(response.text());
-          });
-        this.intervalID =  setInterval(() => this.tick() , 100);
-    }
+        fetch('https://www.hackthebox.eu/api/invite/generate')
+          .then(response => console.log(response))
+          }; 
 
     componentWillUnmount() {
         clearInterval(this.intervalID);
