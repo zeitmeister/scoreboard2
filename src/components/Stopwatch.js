@@ -9,9 +9,8 @@ class Stopwatch extends Component {
     }
 
     componentDidMount() {
-        fetch('https://www.hackthebox.eu/api/invite/generate')
-          .then(response => console.log(response))
-          }; 
+        this.intervalID = setInterval(() => this.tick(), 100);
+    } 
 
     componentWillUnmount() {
         clearInterval(this.intervalID);
